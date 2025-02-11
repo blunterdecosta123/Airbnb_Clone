@@ -25,7 +25,7 @@ app.set("views","views");
 
 
 const MongoDbStore = mongodb_session(session);
-const MONGO_DB_URL =`mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@airbnb.a6v6u.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority&appName=AirBnb`;
+const MONGO_DB_URL =`mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@airbnb.a6v6u.mongodb.net/?retryWrites=true&w=majority&appName=AirBnb`;
 
 const sessionStore = new MongoDbStore({
     uri: MONGO_DB_URL,
